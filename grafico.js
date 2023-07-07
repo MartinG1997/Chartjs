@@ -19,6 +19,7 @@ button.addEventListener('click', (e) => {
   const url = 'https://mindicador.cl/api/';
   let informacionFinanciera = [];
   let unidadMedida;
+  let title;
 
   const getData = async () => {
 
@@ -28,6 +29,7 @@ button.addEventListener('click', (e) => {
     const data = await response.json();
 
     unidadMedida = data.unidad_medida;
+    title = data.codigo;
     console.log(unidadMedida);
 
     informacionFinanciera = data.serie.map(item => {
@@ -41,7 +43,7 @@ button.addEventListener('click', (e) => {
   };
 
   getData().then(() => {
-    createGrafico(informacionFinanciera.reverse());
+    createGrafico(informacionFinanciera.reverse(),title);
     //document.getElementById("prueba").textContent = "El crecimiento fue de " + (informacionFinanciera[informacionFinanciera.length - 1].valor - informacionFinanciera[0].valor);
     document.getElementById("prueba").textContent = "El crecimiento fue de " + unidadMedida;
   });
