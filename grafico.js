@@ -43,7 +43,7 @@ button.addEventListener('click', (e) => {
   };
 
   getData().then(() => {
-    createGrafico(informacionFinanciera.reverse(),title);
+    createGrafico(informacionFinanciera.reverse(),title, unidadMedida);
     //document.getElementById("prueba").textContent = "El crecimiento fue de " + (informacionFinanciera[informacionFinanciera.length - 1].valor - informacionFinanciera[0].valor);
     document.getElementById("prueba").textContent = "El crecimiento fue de " + unidadMedida;
   });

@@ -2,7 +2,7 @@ const grafico = document.getElementById('grafico');
 
 let graficoFinanciero;
 
-export const createGrafico = (data,title) => {
+export const createGrafico = (data,title, money) => {
   if (graficoFinanciero) {
     graficoFinanciero.destroy();
   }
@@ -25,15 +25,46 @@ export const createGrafico = (data,title) => {
           spanGaps: true
         }],
     },
-    options: {
-      plugins: {
-        title: {
+    options: 
+    {
+      plugins: 
+      {
+        title: 
+        {
           display: true,
           text: 'Gráfico de variación  del último mes de ' + title,
-          font: {
+          font: 
+          {
             size: 24,
           }
         },
+      },
+      scales:
+      {
+        x:
+        {
+          display:true,
+          title:
+          {
+            display:true,
+            text: 'Último mes desde la fecha de hoy',
+            font:{
+              size: 20
+            }
+          },
+        },
+        y:
+        {
+          display:true,
+          title:
+          {
+            display:true,
+            text: money,
+            font:{
+              size: 20
+            }
+          }
+        }
       }
     }
   });
