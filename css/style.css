@@ -1,0 +1,45 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+header {
+    width: 100%;
+    overflow: hidden;
+    background: #35dfc8;
+    padding: 20px 10px 20px 10px;
+    border-radius: 0px 0px 15px 15px;
+    margin-bottom: 20px;
+}
+
+section {
+    margin: 0 auto;
+    width: 90%;
+}
+
+canvas {
+    min-width: 100%;
+    margin: 0 auto;
+}
+
+select {
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    min-width: 18%;
+    max-width: 60%;
+}
+
+ button {
+    margin-left: 10px;
+    min-width: none;
+    padding: 10px;
+    background: #5c6664;
+    color:#fff;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+ }

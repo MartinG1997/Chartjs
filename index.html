@@ -2,36 +2,38 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE-Edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Indicadores</title>
+  <link rel="stylesheet" href="css/style.css"/>
 </head>
 <body>
   <header>
-    <h1>Aplicación con Chart</h1>
+    <h1>Indicadores importantes en Chile</h1>
   </header>
 
-  <form id="form">
-    <!--<input type="text" id="inputText">-->
-    <select id="inputText">
-      <option value="">Seleccione un Indicador</option>
-      <option value="uf">UF (Unidad de Fomento)</option>
-      <option value="bitcoin">Bitcoin</option>
-      <option value="dolar">Dólar observado</option>
-      <option value="ivp">Indice de valor promedio (IVP)</option>
-      <option value="dolar_intercambio">Dólar acuerdo</option>
-      <option value="euro">Euro</option>
-      <option value="ipc">Indice de Precios al Consumidor (IPC)</option>
-      <option value="utm">Unidad Tributaria Mensual (UTM)</option>
-      <option value="imacec">Imacec</option>
-      <option value="tpm">Tasa Política Monetaria (TPM)</option>
-      <option value="libra_cobre">Libra de Cobre</option>
-      <option value="tasa_desempleo">Tasa de desempleo</option>
-    </select>
-    <button id="button">Ingresar</button>
-  </form>
-
-  <canvas id="grafico"></canvas>
-  <p id="prueba"></p>
+  <section>
+    <form id="form">
+        <select id="inputText">
+          <option value="">Seleccione un Indicador</option>
+          <option value="uf">UF (Unidad de Fomento)</option>
+          <option value="bitcoin">Bitcoin</option>
+          <option value="dolar">Dólar observado</option>
+          <option value="ivp">Indice de valor promedio (IVP)</option>
+          <option value="euro">Euro</option>
+          <option value="ipc">Indice de Precios al Consumidor (IPC)</option>
+          <option value="utm">Unidad Tributaria Mensual (UTM)</option>
+          <option value="imacec">Imacec</option>
+          <option value="tpm">Tasa Política Monetaria (TPM)</option>
+          <option value="libra_cobre">Libra de Cobre</option>
+          <option value="tasa_desempleo">Tasa de desempleo</option>
+        </select>
+      <button id="button">Ingresar</button>
+    </form>
+  
+    <canvas id="grafico"></canvas>
+    <p id="prueba"></p>
+  </section>
 
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="grafico.js" type="module"></script>
